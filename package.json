@@ -33,6 +33,7 @@
 		"eslint-plugin-react-hooks": "^4.5.0",
 		"eslint-plugin-unused-imports": "^2.0.0",
 		"gsap-trial": "^3.10.4",
+		"loaders.css": "^0.1.2",
 		"react-loaders": "^3.0.1",
 		"sass": "^1.52.1",
 		"stylelint": "^14.6.1",

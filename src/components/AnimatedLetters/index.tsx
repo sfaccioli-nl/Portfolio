@@ -18,7 +18,7 @@ export default function AnimatedLetters({ lettersToAnimate }: IAnimatedLetters):
 	}, []);
 
 	return (
-		<span>
+		<span className={styles.container}>
 			{lettersToAnimate.split('').map((char, i) => (
 				<span key={char + i} className={letterClass} style={{ animationDelay: `${0.5 + i / 10}s` }}>
 					{char}

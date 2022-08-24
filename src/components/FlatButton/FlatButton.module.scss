@@ -13,9 +13,11 @@
   float: left;
   animation: fadeIn 1s 1.8s backwards;
   white-space: nowrap;
+  background: none;
 
   &:hover {
     background:  var(--primary);
     color: var(--mono700);
+    cursor: pointer;
   }
 }

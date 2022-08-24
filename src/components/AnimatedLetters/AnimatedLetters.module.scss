@@ -1,5 +1,14 @@
 @import '../../styles/shared/animations';
 
+.container {
+  color: var(--white);
+  font-size: 53px;
+  margin: 0;
+  font-family: var(--primaryFont);
+  font-weight: font-weight(regular);
+  letter-spacing: 2px;
+}
+
 .textAnimate {
   display: inline-block;
   opacity: 0;

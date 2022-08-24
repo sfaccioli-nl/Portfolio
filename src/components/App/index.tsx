@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import Contact from '../Contact';
 import Home from '../Home';
 import Layout from '../Layout';
 
@@ -8,12 +9,9 @@ import Layout from '../Layout';
 export default function App(): JSX.Element {
 	return (
 		<Routes>
-			<Route path="/" element={<Layout />}>
+			<Route element={<Layout />}>
 				<Route index element={<Home />} />
-
-				{/* 
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} /> */}
+				<Route path="/contact" element={<Contact />} />
 			</Route>
 		</Routes>
 	);

@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
 import styles from './FlatButton.module.scss';
 
 interface IFlatButton {
 	text: string;
-	to: string;
+	type?: 'button' | 'submit' | 'reset' | undefined;
 	onClick?: () => void;
 }
 
@@ -12,8 +11,8 @@ interface IFlatButton {
  */
 export default function FlatButton(props: IFlatButton): JSX.Element {
 	return (
-		<Link to={props.to} className={styles.flatButton}>
+		<button type={props.type} className={styles.flatButton}>
 			{props.text}
-		</Link>
+		</button>
 	);
 }

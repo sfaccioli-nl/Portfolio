@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters';
 import FlatButton from '../FlatButton';
 import styles from './Home.module.scss';
@@ -17,7 +18,9 @@ export default function Home(): JSX.Element {
 			</div>
 			<h2>Javascript / React</h2>
 
-			<FlatButton text="Contact" to="/contact" />
+			<Link to="/contact">
+				<FlatButton text="Contact" />
+			</Link>
 		</>
 	);
 }
