@@ -1,0 +1,56 @@
+@use '../../styles/shared';
+@use '../../styles/theme';
+
+.app {
+	$h-padding: 25px;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+
+	.page {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		padding: 100px $h-padding;
+		background-color: theme.background(inversePrimary);
+	}
+
+	.content {
+		@include shared.custom-scrollbar(8px, theme.background(inversePrimary), var(--primary));
+		overflow-y: auto;
+		max-height: 100%;
+		padding-left: 10%;
+	}
+
+	.tags {
+		$h-offset: 75%;
+		$v-offset: 15px;
+		color: var(--primary);
+		opacity: 0.6;
+		position: absolute;
+		left: $h-padding;
+		font-size: 18px;
+		font-family: 'La Belle Aurore';
+
+		span {
+			display: block;
+			position: relative;
+		}
+
+		&.topTags {
+			top: $v-offset;
+
+			span:last-child {
+				left: $h-offset;
+			}
+		}
+
+		&.bottomTags {
+			bottom: $v-offset;
+
+			span:first-child {
+				left: $h-offset;
+			}
+		}
+	}
+}
