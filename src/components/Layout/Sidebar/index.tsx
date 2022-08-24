@@ -38,7 +38,7 @@ export default function Sidebar(): JSX.Element {
 					</li>
 
 					<li>
-						<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/selene-faccioli-13389a107/">
+						<a target="_blank" rel="noreferrer" href="https://github.com/sfaccioli-nl">
 							<FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
 						</a>
 					</li>
