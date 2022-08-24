@@ -1,0 +1,23 @@
+@import '../../styles/shared/animations';
+
+.textAnimate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s 1s forwards;
+  min-width: 10px;
+  overflow-y: auto;
+}
+
+.textAnimateHover {
+  min-width: 10px;
+  display: inline-block;
+  overflow-y: auto;
+  animation: rubberBand 1s;
+  animation-fill-mode: both;
+
+  &:hover {
+    animation: none;
+    color: var(--primary);
+  }
+}
+
