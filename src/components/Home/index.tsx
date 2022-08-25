@@ -9,7 +9,7 @@ import styles from './Home.module.scss';
 export default function Home(): JSX.Element {
 	return (
 		<>
-			<div className={styles.letters}>
+			<div className={styles.letters} data-testid="animated-letters">
 				<AnimatedLetters lettersToAnimate="Hi," />
 				<br />
 				<AnimatedLetters lettersToAnimate="I'm Selene," />
@@ -18,7 +18,7 @@ export default function Home(): JSX.Element {
 			</div>
 			<h2>Javascript / React</h2>
 
-			<Link to="/contact">
+			<Link to="/contact" data-testid="contact-link">
 				<FlatButton text="Contact" />
 			</Link>
 		</>

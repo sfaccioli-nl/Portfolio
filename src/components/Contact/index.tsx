@@ -56,16 +56,16 @@ export default function Contact(): JSX.Element {
 	return (
 		<div className={styles.container}>
 			<div className={styles.contactForm}>
-				<div className={styles.description}>
+				<div className={styles.description} data-testid="animated-letters">
 					<AnimatedLetters lettersToAnimate="Contact me" />
 
-					<p>
+					<p data-testid="info">
 						I want to develop web and mobile apps so that I can use my creativity and tech skills to bring people together for a special
 						experience and help organizations attract and engage new customers
 					</p>
 				</div>
 
-				<form ref={refForm} onSubmit={sendEmail} className={styles.form}>
+				<form ref={refForm} onSubmit={sendEmail} className={styles.form} data-testid="form">
 					{emailResult && <p className={emailResult.isSuccess ? styles.success : styles.error}>{emailResult.message}</p>}
 
 					<input type="text" name="name" placeholder="Name" required />
@@ -93,7 +93,8 @@ export default function Contact(): JSX.Element {
 					style={{ border: 0 }}
 					allowFullScreen
 					loading="lazy"
-					referrerPolicy="no-referrer-when-downgrade"></iframe>
+					referrerPolicy="no-referrer-when-downgrade"
+					data-testid="map"></iframe>
 			</div>
 		</div>
 	);
