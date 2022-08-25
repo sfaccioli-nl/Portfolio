@@ -1,4 +1,5 @@
 @import '../../styles/shared/animations';
+@import '../../styles/variables';
 
 .container {
   color: var(--white);
@@ -30,3 +31,14 @@
   }
 }
 
+@media (media-query(max, md)) {
+  .container {
+    font-size: size(xl);
+  }
+}
+
+@media (media-query(max, sm)) {
+  .container {
+    font-size: size(l);
+  }
+}

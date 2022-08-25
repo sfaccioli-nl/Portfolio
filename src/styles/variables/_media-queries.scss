@@ -1,6 +1,7 @@
 @use '../shared/functions';
 
 $_max: (
+	xs: '(max-width: 400px)',
 	sm: '(max-width: 575px)',
 	md: '(max-width: 767px)',
 	lg: '(max-width: 991px)',
@@ -9,6 +10,7 @@ $_max: (
 );
 
 $_min: (
+	xs: '(min-width: 401px)',
 	sm: '(min-width: 576px)',
 	md: '(min-width: 768px)',
 	lg: '(min-width: 992px)',

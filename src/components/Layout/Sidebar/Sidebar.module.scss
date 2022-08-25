@@ -9,6 +9,15 @@
 	.logo {
 		display: block;
 		padding: 8px 0;
+		text-align: center;
+
+		.mainLogo{
+			font-size: 50px;
+  		font-family: var(--primary-font);
+			color: var(--primaryA);
+			font-weight: 600;
+			text-shadow: -3px 3px 0px var(--primary);
+		}
 
 		img {
 			display: block;
@@ -91,7 +100,7 @@
 
 		a.active {
 			svg {
-				color: #ffd700;
+				color: var(--primary);
 			}
 		}
 	}

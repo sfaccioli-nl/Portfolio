@@ -21,3 +21,10 @@
     cursor: pointer;
   }
 }
+
+@media (media-query(max, md)) {
+  .flatButton {
+    font-size: size(s);
+    text-transform: uppercase;
+  }
+}
