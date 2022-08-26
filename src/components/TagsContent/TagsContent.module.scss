@@ -1,0 +1,56 @@
+@import '../../styles/variables';
+
+.container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding-left: 25px;
+}
+
+.tags {
+  $h-padding: -100px;
+  $h-offset: 75%;
+  $v-offset: 15px;
+  color: var(--primary);
+  opacity: 0.6;
+  position: absolute;
+  font-size: 18px;
+  font-family: 'La Belle Aurore';
+
+  span {
+    display: block;
+    position: relative;
+  }
+
+  &.topTags {
+    top: $v-offset;
+
+    span:last-child {
+      left: $h-offset;
+    }
+  }
+
+  &.bottomTags {
+    bottom: $v-offset;
+
+    span:first-child {
+      left: $h-offset;
+    }
+  }
+}
+
+@media (media-query(max, md)) {
+
+	.container {
+		width: 100%;
+    flex-direction: column;
+    justify-content: center;
+	}
+
+  .tags {
+    left: 0;
+   }
+}

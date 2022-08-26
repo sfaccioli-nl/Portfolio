@@ -1,21 +1,22 @@
 @import '../../styles/shared/animations';
+@import '../../styles/variables';
 
 .container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 
-  .cloud {
-    color: var(--primary);
-    width: 50%;
-    position: absolute;
-    left: 50%;
-  }
+}
 
+.cloud {
+  color: var(--primary);
+  position: absolute;
+  right: 0;
+  top: -25px;
 }
 
 .info {
-  width: 50%;
+  width: 100%;
 
   p {
     font-size: size(m);
@@ -35,15 +36,6 @@
   }
 }
 
-
-
-.mediumContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
-  .mediumCloud {
-    color: var(--primary);
-  }
+@media (media-query(max, md)) {
+  
 }
