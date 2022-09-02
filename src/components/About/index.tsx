@@ -1,6 +1,7 @@
 import AnimatedLetters from '../AnimatedLetters';
 import useMediaQuery from '../Hooks/useMediaQuery';
 import InteractiveContent from '../InteractiveContent';
+import SkillCard from '../SkillCard';
 import TagsContent from '../TagsContent';
 import WordCloud from '../WordCloud/WordCloud';
 import styles from './About.module.scss';
@@ -11,6 +12,22 @@ import styles from './About.module.scss';
 export default function About(): JSX.Element {
 	const isLg = useMediaQuery('(max-width: 991px)');
 	const isMd = useMediaQuery('(max-width: 767px)');
+	const isXs = useMediaQuery('(max-width: 400px)');
+
+	const skills = Object.freeze<string[]>([
+		'JavaScript',
+		'TypeScript',
+		'React',
+		'Github',
+		'HTML5',
+		'CSS',
+		'Node',
+		'Java',
+		'React Native',
+		'Sass',
+		'Material design',
+		'Jest'
+	]);
 
 	return (
 		<>
@@ -34,9 +51,17 @@ export default function About(): JSX.Element {
 			</TagsContent>
 
 			<InteractiveContent>
-				<div className={styles.cloud}>
-					<WordCloud />
-				</div>
+				{isXs ? (
+					<div className={styles.skills}>
+						{skills.map((skill, i) => (
+							<SkillCard key={i} skill={skill} index={i} />
+						))}
+					</div>
+				) : (
+					<div className={styles.cloud}>
+						<WordCloud />
+					</div>
+				)}
 			</InteractiveContent>
 		</>
 	);

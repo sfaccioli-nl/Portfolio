@@ -54,3 +54,19 @@
     left: 0;
    }
 }
+
+
+@media (media-query(max, sm)) {
+
+  .tags {
+    &.topTags {
+      top: 5px;
+    }
+
+    &.bottomTags {
+      bottom: 5px;
+    }
+  }
+
+}
+

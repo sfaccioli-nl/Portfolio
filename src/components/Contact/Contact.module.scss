@@ -112,13 +112,18 @@
     .contactForm {
       width: 100%;
     }
-
-    // .mapWrap {
-    //   position: relative;
-    //   width: 100%;
-    //   margin-top: 20px;
-    //  }
   
+}
+
+@media (media-query(max, sm)) {
+
+  .mapWrap {
+     iframe {
+      animation: none;
+      opacity: 1;
+     }
+   }
+
 }
 
 

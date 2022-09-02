@@ -19,6 +19,10 @@
 		background-color: theme.background(inversePrimary);
 	}
 
+	.loader {
+		text-align: center;
+	}
+
 	.content {
 		@include shared.custom-scrollbar(8px, theme.background(inversePrimary), var(--primary));
 		overflow-y: auto;
@@ -33,6 +37,14 @@
 
 	.content {
 		display: flex;
+		flex-direction: column;
+	}
+}
+
+
+@media (media-query(max, xs)) {
+
+	.app {
 		flex-direction: column;
 	}
 }
